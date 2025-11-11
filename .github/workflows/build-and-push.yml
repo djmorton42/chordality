@@ -1,0 +1,43 @@
+name: Build and Push to ECR
+
+on:
+#  push:
+#    branches:
+#      - main
+#  pull_request:
+#    branches:
+#      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: write
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v2
+      with:
+        role-to-assume: arn:aws:iam::620965416303:role/GithubAction-AssumeRoleWithAction
+        aws-region: us-east-1
+    - name: Login to Amazon ECR Private
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v1
+    - name: Sts GetCallerIdentity
+      run: |
+        aws sts get-caller-identity
+
+    - name: Build and push UI image
+      env:
+        ECR_REGISTRY: 620965416303.dkr.ecr.us-east-1.amazonaws.com
+        ECR_REPOSITORY: chordality
+        IMAGE_TAG: ${{ github.sha }}
+      run: |
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        docker tag $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG $ECR_REGISTRY/$ECR_REPOSITORY:latest
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest 
