@@ -1,0 +1,143 @@
+.display-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  gap: 50px;
+}
+
+.chord-display {
+  background: white;
+  border-radius: 20px;
+  padding: 60px 100px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 400px;
+  min-height: 300px;
+  gap: 30px;
+}
+
+.chord-symbol {
+  font-size: 8em;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  font-family: 'Georgia', serif;
+  letter-spacing: 0.05em;
+}
+
+.chord-notes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.notes-label {
+  font-size: 1.5em;
+  color: #666;
+  font-weight: 600;
+}
+
+.notes-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.note-item {
+  font-size: 2em;
+  font-weight: bold;
+  color: #667eea;
+  padding: 10px 20px;
+  background: #f0f4ff;
+  border-radius: 8px;
+  border: 2px solid #667eea;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.action-button {
+  padding: 18px 30px;
+  font-size: 1.1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  min-width: 140px;
+  flex: 0 1 auto;
+}
+
+.next-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.next-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.config-button {
+  background: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+}
+
+.config-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+  background: #f8f9ff;
+}
+
+.check-button {
+  background: #28a745;
+  color: white;
+}
+
+.check-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(40, 167, 69, 0.4);
+  background: #218838;
+}
+
+.play-chord-button {
+  background: #ff6b6b;
+  color: white;
+}
+
+.play-chord-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 107, 107, 0.4);
+  background: #ee5a5a;
+}
+
+.play-arpeggio-button {
+  background: #4ecdc4;
+  color: white;
+}
+
+.play-arpeggio-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(78, 205, 196, 0.4);
+  background: #3db8af;
+}
+
