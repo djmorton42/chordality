@@ -182,3 +182,94 @@
   font-size: 0.9em;
 }
 
+@media (max-width: 768px) {
+  .config-screen {
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .config-screen h1 {
+    font-size: 1.8em;
+  }
+
+  .app-header {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .app-logo {
+    height: 40px;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .section-header h2 {
+    font-size: 1.2em;
+  }
+
+  .select-buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .select-btn {
+    flex: 1;
+    font-size: 0.85em;
+    padding: 6px 12px;
+  }
+
+  .checkbox-grid.letters-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .checkbox-list.qualities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .start-button,
+  .list-all-button {
+    font-size: 1.2em;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .config-screen {
+    padding: 15px;
+    margin: 5px;
+    border-radius: 12px;
+  }
+
+  .config-screen h1 {
+    font-size: 1.5em;
+  }
+
+  .app-logo {
+    height: 35px;
+  }
+
+  .section-header h2 {
+    font-size: 1.1em;
+  }
+
+  .checkbox-label span {
+    font-size: 1em;
+  }
+
+  .start-button,
+  .list-all-button {
+    font-size: 1.1em;
+    padding: 14px;
+  }
+}
+

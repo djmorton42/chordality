@@ -30,6 +30,71 @@
   letter-spacing: 0.05em;
 }
 
+@media (max-width: 768px) {
+  .display-screen {
+    gap: 30px;
+    min-height: 70vh;
+    padding: 20px;
+  }
+
+  .chord-display {
+    padding: 30px 20px;
+    min-width: unset;
+    width: 100%;
+    max-width: 100%;
+    min-height: 200px;
+    gap: 20px;
+  }
+
+  .chord-symbol {
+    font-size: 4em;
+  }
+
+  .notes-label {
+    font-size: 1.2em;
+  }
+
+  .notes-list {
+    gap: 10px;
+  }
+
+  .note-item {
+    font-size: 1.5em;
+    padding: 8px 16px;
+  }
+
+  .button-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .button-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .action-button {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+@media (max-width: 480px) {
+  .chord-symbol {
+    font-size: 3em;
+  }
+
+  .chord-display {
+    padding: 20px 15px;
+    min-height: 180px;
+  }
+
+  .note-item {
+    font-size: 1.2em;
+    padding: 6px 12px;
+  }
+}
+
 .chord-notes {
   display: flex;
   flex-direction: column;
